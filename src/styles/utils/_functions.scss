@@ -1,0 +1,37 @@
+@use "sass:math";
+@use "sass:map";
+
+// Font size calculations
+@function rem($px, $base-font-size: 15) {
+  @return math.div($px, $base-font-size) * 1rem;
+}
+
+// Spacing calculations
+@function spacing($multiplier) {
+  $base-spacing: 8;
+  @return rem(math.div($base-spacing * $multiplier, 1));
+}
+
+// Border radius calculations
+@function radius($size: 'medium') {
+  $radii: (
+    'small': 4px,
+    'medium': 8px,
+    'large': 16px,
+    'full': 9999px
+  );
+  @return map.get($radii, $size);
+}
+
+// Z-index management
+@function z($layer) {
+  $layers: (
+    'modal': 1000,
+    'overlay': 900,
+    'dropdown': 800,
+    'header': 700,
+    'footer': 600
+  );
+  @return map.get($layers, $layer);
+}
+

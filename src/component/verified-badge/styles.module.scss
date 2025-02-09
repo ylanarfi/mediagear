@@ -1,0 +1,22 @@
+@use '../../styles/utils/functions' as *;
+@use '../../styles/utils/variables' as *;
+
+.badge {
+  background-color: $color-white;
+  border-radius: radius('full');
+  padding: spacing(0.5);
+  box-shadow: $shadow-md;
+}
+
+.inner {
+  background-color: $color-primary;
+  border-radius: radius('full');
+  padding: spacing(0.5);
+}
+
+.icon {
+  width: rem(16);
+  height: rem(16);
+  color: $color-white;
+}
+

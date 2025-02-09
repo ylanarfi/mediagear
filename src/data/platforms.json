@@ -1,0 +1,80 @@
+[
+  {
+    "platform": "TikTok",
+    "description": "duelist main imm3",
+    "icon": "/assets/TikTok.png",
+    "link": "https://www.tiktok.com/@iamja2_",
+    "stats": [
+      {
+        "label": "Followers",
+        "value": "6.7K",
+        "trend": 34,
+        "period": "vs last month"
+      },
+      {
+        "label": "Likes",
+        "value": "160.7K",
+        "trend": 100,
+        "period": "vs last month"
+      },
+      {
+        "label": "Views",
+        "value": "302K",
+        "trend": 100,
+        "period": "vs last month"
+      }
+    ]
+  },
+  {
+    "platform": "Twitter",
+    "description": "21 🇫🇷 | F/A dash in site for ??",
+    "icon": "/assets/X.png",
+    "link": "https://www.x.com/iamja2_",
+    "stats": [
+      {
+        "label": "Followers",
+        "value": "928",
+        "trend": 344,
+        "period": "vs last month"
+      },
+      {
+        "label": "Posts",
+        "value": "1.8K",
+        "trend": 12,
+        "period": "vs last month"
+      },
+      {
+        "label": "Likes",
+        "value": "16.6K",
+        "trend": -65,
+        "period": "vs last month"
+      }
+    ]
+  },
+  {
+    "platform": "Twitch",
+    "description": "Joueuse Valorant - main duelist immo :))",
+    "icon": "/assets/twitch.png",
+    "link": "https://www.twitch.tv/iamja2",
+    "stats": [
+      {
+        "label": "Followers",
+        "value": "2.4K",
+        "trend": 44,
+        "period": "vs last month"
+      },
+      {
+        "label": "Average Viewers",
+        "value": "45.6",
+        "trend": 22,
+        "period": "vs last month"
+      },
+      {
+        "label": "Hours Streamed",
+        "value": "15.7",
+        "trend": -17,
+        "period": "vs last month"
+      }
+    ]
+  }
+] 

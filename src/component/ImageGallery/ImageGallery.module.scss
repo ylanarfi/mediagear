@@ -1,0 +1,173 @@
+@use "../../styles/utils/functions" as *;
+
+// Определение ключевых кадров для анимации
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.section {
+  position: relative;
+
+  h3 {
+    margin-top: 0;
+    color: #181D27;
+    font-family: Inter, sans-serif;
+    font-size: rem(18);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: rem(32);
+  }
+}
+
+.framesGrid {
+  display: flex;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: rem(22);
+  align-self: stretch;
+  flex-wrap: wrap;
+
+  .frame {
+    position: relative;
+    width: rem(388);
+    flex-grow: 1;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+
+    &:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      transform: translateY(-5px);
+
+        .expandButton {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            display: block;
+        }
+    }
+    overflow: hidden;
+    border-radius: 8px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.4s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+
+    }
+
+    .expandButton {
+      position: absolute;
+      bottom: 40%;
+      left: 50%;
+      transform: translate(-50%, 20px);
+      border: 1px solid #7F56D9 !important;
+      color: #FFF !important;
+      background: #7F56D9 !important;
+      font-family: Inter, sans-serif !important;
+      font-size: rem(14) !important;
+      font-weight: 600 !important;
+      line-height: rem(20) !important;
+      opacity: 0;
+      transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out !important;
+
+      &:hover {
+        background: darken(#7F56D9, 10%);
+        border-color: darken(#7F56D9, 10%);
+      }
+
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  // opacity: 0;
+  // visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+
+    .modalContent {
+      animation: fadeIn 0.7s ease forwards;
+    }
+  }
+}
+
+.modalContent {
+  max-width: 80%;
+  max-height: 80%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  // opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: #bbb;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modalContent {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .close {
+    top: 10px;
+    right: 10px;
+  }
+
+  .framesGrid {
+    .frame {
+      height: auto;
+      min-width: 100%;
+      max-width: 100%;
+
+      img {
+        height: auto;
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

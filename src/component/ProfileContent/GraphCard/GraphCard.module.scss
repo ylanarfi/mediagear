@@ -1,0 +1,26 @@
+@use '../../../styles/utils/functions' as *;
+@use '../../../styles/utils/variables' as *;
+@import '../../../styles/utils/mixin';
+
+.graphCard {
+  @include card;
+
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: rem(8);
+  }
+
+  .graph {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
