@@ -287,7 +287,7 @@ const ProfileContent: React.FC<ProfileContentProps> = ({ userData, platforms, ac
           <div className={styles.footer} id='footer'>
             <div className={styles.footerContent}>
               <div className={styles.footerText}>
-                <p>© 2025 Media Gear Inc. All rights reserved.</p>
+                <p>© 2025 Mediagear Inc. All rights reserved.</p>
               </div>
             </div>
           </div>
